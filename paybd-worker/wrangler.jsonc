@@ -1,0 +1,30 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "paybd-gateway",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-02-15",
+  "compatibility_flags": ["nodejs_compat"],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "paybd-d1",
+      "database_id": "YOUR_D1_DATABASE_ID_HERE"
+    }
+  ],
+  "triggers": {
+    "crons": ["*/15 * * * *"]
+  },
+  "vars": {
+    "APP_ENV": "production",
+    "APP_NAME": "PayBD",
+    "APP_URL": "https://paybd.nasirdigitalhub.com",
+    "CURRENCY_CODE": "BDT",
+    "JWT_EXPIRY": "604800"
+  },
+  "routes": [
+    {
+      "pattern": "paybd.nasirdigitalhub.com/*",
+      "custom_domain": true
+    }
+  ]
+}

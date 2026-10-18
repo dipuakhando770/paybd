@@ -1,0 +1,27 @@
+# Environment file
+.env
+
+# Dependencies
+node_modules/
+vendor/
+
+# CodeIgniter Writable Cache & Logs
+writable/cache/*
+!writable/cache/index.html
+!writable/cache/.gitkeep
+writable/debugbar/*
+writable/logs/*
+!writable/logs/index.html
+!writable/logs/.gitkeep
+writable/session/*
+!writable/session/index.html
+!writable/session/.gitkeep
+writable/uploads/*
+!writable/uploads/index.html
+!writable/uploads/.gitkeep
+
+# Error logs & Temp
+error_log
+*.log
+.DS_Store
+Thumbs.db
